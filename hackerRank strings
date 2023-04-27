@@ -1,0 +1,69 @@
+es 1 String Split and Join
+def split_and_join(line):
+    # write your code here
+        a = line.split(" ")
+        b = "-".join(a)
+        return b
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+    
+
+
+
+
+
+es 2 Capitalize!
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    for x in s.split():
+        s = s.replace(x,x.capitalize())
+    return s
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+
+
+
+es 3 Text Wrap
+import textwrap
+
+def wrap(string, max_width):
+    return textwrap.fill(string,max_width)
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
+    
+    
+    
+    
+    es 4 Mutations
+    
+    def mutate_string(string, position, character):
+    a = list(string)
+    a[position] = character
+    string = "".join(a)
+    
+    return string
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
