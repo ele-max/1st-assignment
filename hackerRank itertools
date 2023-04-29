@@ -1,0 +1,48 @@
+1 itertools.product()
+
+from itertools import product
+
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+cartesian_product = list(product(A, B))
+
+for pair in cartesian_product:
+    print(pair, end=' ')
+
+2 itertools.permutations()
+from itertools import permutations
+
+s, k = input().split()
+
+permutations_list = list(permutations(s, int(k)))
+permutations_list.sort()
+
+for permutation in permutations_list:
+    print(''.join(permutation))
+    
+    
+3 itertools.combinations()
+
+from itertools import combinations
+
+s, k = input().split()
+
+combinations_list = []
+
+for i in range(1, int(k) + 1):
+    combinations_list += list(combinations(sorted(s), i))
+
+for combination in combinations_list:
+    print(''.join(combination))
+    
+    
+4 itertools.combinations_with_replacement()
+
+from itertools import combinations_with_replacement
+S,k = input().split()
+
+c = combinations_with_replacement(sorted(S),int(k))
+for i in list(c):
+    print("".join(i), sep="\n")
+    
