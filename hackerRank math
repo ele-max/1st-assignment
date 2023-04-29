@@ -1,0 +1,26 @@
+1 Triangle Quest
+
+for i in range(1,int(input())): #More than 2 lines will result in 0 score. Do not leave a blank line also
+    print((i* (10**i) )//9)
+    
+    
+2 Integers Come In All Sizes
+
+a,b,c,d = (int(input()) for i in range(4))
+print(a**b + c**d)
+
+
+3 Power - Mod Power
+
+a = int(input())
+b = int(input())
+m = int(input())
+
+print(pow(a, b))
+print(pow(a, b, m))
+
+
+4 mod divimod
+a = int(input())
+b = int(input())
+print((a // b), (a % b), divmod(a,b), sep='\n')
