@@ -1,0 +1,60 @@
+1 collections.counter()
+
+from collections import Counter
+X = int(input())    # X number of shoes
+shoe_size = list(map(int,input().split()))
+shoe_size = Counter(shoe_size)
+#print(shoe_size)
+N = int(input())   # N number of customers 
+earned = 0
+for i in range(N):
+    desired, price = map(int,input().split())
+    if desired in shoe_size.keys() and shoe_size[desired]>0:
+        earned += price
+        shoe_size[desired] -= 1
+print(earned)
+
+
+2 Collections.namedtuple()
+
+from collections import namedtuple
+
+num_students = int(input())
+
+student = namedtuple("student", input().split())
+
+total = 0
+for _ in range(num_students):
+    total += int(student(*input().split()).MARKS)
+
+
+print(total / num_students)
+
+
+3 Collections.OrderedDict()
+from collections import OrderedDict
+d = OrderedDict()
+for _ in range(int(input())):
+    item, space, quantity = input().rpartition(' ')
+    d[item] = d.get(item, 0) + int(quantity)
+for item, quantity in d.items():
+    print(item, quantity)
+    
+4 Collections.deque()
+
+from collections import deque
+n = int(input())
+list = deque()
+for _ in range(n):
+    op_name, *op_args = input().split()
+    if op_name == "append":
+        list.append(*op_args)
+    elif op_name == "appendleft":
+        list.appendleft(*op_args)
+    elif op_name == "pop":
+        list.pop()
+    elif op_name == "popleft":
+        list.popleft()
+# print(lst)
+for i in list:
+    print(i, end=" ")
