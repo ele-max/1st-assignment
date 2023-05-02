@@ -1,0 +1,34 @@
+ 1 big sorting
+ def bigSorting(unsorted):
+    # Write your code here
+    numb =list()
+    for i in sorted(unsorted, key = int):
+        numb.append(i)
+    return(numb)
+ 
+ 
+ 2 intro to tutorial challenges
+ 
+ def introTutorial(V, arr):
+    # Write your code here
+    return(int(arr.index(V)))
+
+
+3 Insertion Sort - Part 1
+ def insertionSort1(n, arr):
+    # Write your code here
+    target = arr[-1]
+    index = n - 1
+    while index > 0 and arr [index-1] > target:
+        arr[index] = arr[index-1]
+        print(*arr)
+        index -= 1
+    arr[index] = target
+    print(*arr)
+    
+    
+4 Insertion Sort - Part 2
+
+
+
+ 
