@@ -1,0 +1,82 @@
+1 camelcase
+ def camelcase(s):
+      res = 1
+     for letter in s:
+        if letter.isupper():
+            res += 1
+        else:
+            res += 0
+    
+     return res
+     
+     
+2 strong password 
+def minimumNumber(n, password):
+    # Return the minimum number of characters to make the password strong
+    
+    numbers = "0123456789"
+    lower_case = "abcdefghijklmnopqrstuvwxyz"
+    upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    special_characters = "!@#$%^&*()-+"
+
+    count = 0    
+    if any(i.isdigit() for i in password) == False:
+        count += 1
+    if any(i.islower() for i in password) == False:
+        count += 1
+    if any(i.isupper() for i in password) == False:
+        count += 1
+    if any(i in special_characters for i in password) == False:
+        count+=1
+
+    return max(count,6-n)
+    
+    
+    
+3 two Characters 
+
+def alternate(s):
+    # Write your code here
+    char_list = list(set(s))
+        # maximum length
+    maximum = 0
+    for i in range(len(char_list)):
+        for j in range(i+1, len(char_list)):
+            z = ""
+            for k in range(len(s)):
+                if s[k] == char_list[i] or s[k] == char_list[j]:
+                    z += s[k]
+            if len(z) > maximum and len(set(z[::2])) == 1 and len(set(z[1::2])) == 1:
+                maximum = len(z)
+    return maximum
+    
+    
+    
+4 Mars Exploration
+def marsExploration(s):
+    y = "SOS" * int(len(s) / 3)
+    return sum(s[i] != y[i] for i in range(len(s)))
+    
+5 HackerRank in a String!
+
+
+def hackerrankInString(s):
+    # Write your code here
+    word = 'hackerrank'
+    index = 0
+    for x in s:
+        if x == word[index]:
+            index += 1
+        if index == len(word):
+            break
+             
+    if index == len(word):
+        return "YES"
+    else: 
+        return "NO"
+
+
+
+    
+    
+    
